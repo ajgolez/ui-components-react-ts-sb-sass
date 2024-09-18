@@ -9,7 +9,7 @@ const meta = {
   component: Button,
   parameters: {
     // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/configure/story-layout
-    layout: 'centered',
+    layout: 'centered'
   },
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs
   tags: ['autodocs'],
@@ -30,6 +30,12 @@ export const Primary: Story = {
     primary: true,
     label: 'Button',
   },
+  parameters:{
+    design: {
+      type: 'figma',
+      url: 'https://www.figma.com/design/ZItTqCeMWh0eWnjh6amHcl/Test?node-id=0-1&t=B4NEZjjKpZocVxKh-1',
+    },
+  }
 };
 
 export const Secondary: Story = {
