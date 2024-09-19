@@ -29,6 +29,27 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
+
+### `yarn storybook`
+
+To run Storybook on your local machine.
+This will start the Storybook server, and it will be available at http://localhost:6006.
+
+### `yarn chromatic`
+
+To run visual regression tests with Chromatic.
+Make sure you’ve set up Chromatic for your repository by linking it with your Chromatic project.
+
+### `yarn build-storybook`
+
+To build a static version of Storybook, which can be deployed to a hosting platform.
+This command will generate static files in the storybook-static/ directory, ready to be deployed.
+
+### `yarn deploy-storybook`
+
+To deploy the built Storybook to GitHub Pages.
+Make sure that your gh-pages branch is set up properly, and the homepage field in package.json is set to the correct GitHub Pages URL (e.g., https://ajgolez.github.io/ui-components-react-ts-sb-sass/).
+
 ### `yarn eject`
 
 **Note: this is a one-way operation. Once you `eject`, you can't go back!**
