@@ -24,10 +24,9 @@ jobs:
     - name: Build Storybook
       run: yarn build-storybook
 
-    - name: Deploy to GitHub Pages via SSH
+    - name: Deploy to GitHub Pages
       env:
-        GIT_SSH_COMMAND: "ssh -i ~/.ssh/id_rsa -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-        git remote set-url origin git@github.com:ajgolez/ui-components-react-ts-sb-sass.git
+        git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/ajgolez/ui-components-react-ts-sb-sass.git
         yarn deploy-storybook
