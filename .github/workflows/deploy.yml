@@ -3,7 +3,7 @@ name: Deploy Storybook to GitHub Pages
 on:
   push:
     branches:
-      - main  # or your branch configuration
+      - main  # or any other branches you want to trigger the workflow on
 
 jobs:
   deploy:
@@ -11,20 +11,20 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v3  # Update to v3 for latest compatibility
+      uses: actions/checkout@v3  # This version is fine
 
     - name: Set up Node.js
-      uses: actions/setup-node@v3  # Use v3 and specify the Node.js version
+      uses: actions/setup-node@v3
       with:
-        node-version: '16'  # Use Node 16 or change to '18' for the latest LTS version
+        node-version: '18'  # Update to Node.js 18
 
     - name: Install dependencies
-      run: yarn install  # or `npm install` if you are using npm
+      run: yarn install  # or `npm install` if you're using npm
 
     - name: Build Storybook
-      run: yarn build-storybook  # Builds the static Storybook
+      run: yarn build-storybook  # This builds Storybook
 
     - name: Deploy to GitHub Pages
-      run: yarn deploy-storybook  # Uses the deploy command from your package.json
+      run: yarn deploy-storybook  # Deploy using your package.json script
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Automatically provided by GitHub
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # GitHub authentication token
