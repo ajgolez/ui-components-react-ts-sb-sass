@@ -49,6 +49,12 @@ export const Large: Story = {
     size: 'large',
     label: 'Button',
   },
+  parameters:{
+    design: {
+      type: 'figma',
+      url: 'https://www.figma.com/design/ZItTqCeMWh0eWnjh6amHcl/Test?node-id=0-1&t=B4NEZjjKpZocVxKh-1',
+    },
+  }
 };
 
 export const Small: Story = {
