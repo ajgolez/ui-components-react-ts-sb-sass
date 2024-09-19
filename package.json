@@ -17,6 +17,12 @@
     "typescript": "^5.6.2",
     "web-vitals": "^2.1.0"
   },
+  "storybook-deployer": {
+    "gitUsername": "ajgolez",
+    "gitEmail": "antoniusgolez@gmail.com",
+    "branch": "gh-pages"
+  },
+  "homepage": "https://ajgolez.github.io/ui-components-react-ts-sb-sass/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -24,7 +30,8 @@
     "eject": "react-scripts eject",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "chromatic": "npx chromatic --project-token=chpt_db24f493b3f6cab"
+    "chromatic": "npx chromatic --project-token=chpt_db24f493b3f6cab",
+    "deploy-storybook": "storybook-to-ghpages"
   },
   "eslintConfig": {
     "extends": [
@@ -62,6 +69,7 @@
     "eslint-plugin-storybook": "^0.8.0",
     "prop-types": "^15.8.1",
     "storybook": "^8.3.1",
+    "storybook-deployer": "^2.8.12",
     "webpack": "^5.94.0"
   }
 }
